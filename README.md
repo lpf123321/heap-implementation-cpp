@@ -50,4 +50,28 @@ git config --global https.proxy http://127.0.0.1:7890
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
-
+## 提交Pull Request
+### 1. Fork 或在分支上开发
+* 如果是 **自己仓库**：直接在 `main` 之外新建一个分支开发
+  ```bash
+  git checkout -b feature-branch
+  ```
+  修改并提交代码（使用`git add`与`git commit`），然后推送：
+  ```bash
+  git push origin feature-branch
+  ```
+* 如果是 **别人仓库**：需要先点 **Fork** 按钮，把别人的仓库复制到自己的 GitHub，然后在自己的仓库里新建分支修改，最后提交。
+### 2. 去 GitHub 提交 Pull Request
+1. 打开目标仓库的 GitHub 页面（如果是 fork，则打开 fork 的仓库）。
+2. GitHub 通常会提示：
+   **“Compare & pull request”**
+   点击它。
+3. 选择：
+   * **base repository**（要合并到哪个仓库，通常是原始仓库的 main 分支）
+   * **head repository**（你的分支所在仓库和分支）
+4. 填写 PR 标题和描述，说明做了哪些改动。
+5. 点击 **Create pull request**。
+### 3. 等待审核与合并
+* 仓库维护者会收到通知，查看你的修改。
+* 如果需要修改，维护者可能会在 PR 下留言。
+* 一旦审核通过，他们就会点击 **Merge**，你的代码就会被合并到主仓库。
